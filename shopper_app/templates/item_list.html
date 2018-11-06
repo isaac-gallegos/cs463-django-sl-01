@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1>ITEM INVENTORY</h1>
+    <h1>~All of your items~</h1>
 
     <ul>
     	{% for item in object_list %} 
-    	
+    		<li> <a href= "{% url 'item' item.pk %}"> {{ item.name }}, {{ item.price }} </li>
     	{% endfor %}
     </ul>
 </body>
