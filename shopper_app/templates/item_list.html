@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>A List of Items</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <h1>~All of your items~</h1>
+{% extends "base.html" %}
+
+{% block content_body %}
+    <h1>~All of Your Items~</h1>
 
     <ul>
     	{% for item in object_list %} 
     		<li> <a href= "{% url 'item' item.pk %}"> {{ item.name }}, {{ item.price }} </li>
     	{% endfor %}
     </ul>
-</body>
-</html>
+{% endblock content_body %}
