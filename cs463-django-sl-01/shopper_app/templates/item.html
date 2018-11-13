@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content_body %}
+<div class="row">
+
+	<div class="col-md-3">
+		<p>Name: {{ object.name }}</p>
+	</div>
+
+	<div class="col-md-9">
+		<p><img src="{{ object.image_url}}" width="320px"></p>
+		<p>Price: {{ object.price }}</p>
+    	<p>Description: {{ object.description }}</p>
+    </div>
+</div>
+{% endblock content_body %}
