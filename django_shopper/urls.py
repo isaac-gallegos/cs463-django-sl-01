@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from shopper_app.views import HomeView, ItemListView, ItemView
+from shopper_app.views import HomeView, ItemListView, ItemView, ItemCreateView
 urlpatterns = [
 	path('', HomeView.as_view(), name='home'),
 	path('items/', ItemListView.as_view(), name='item_list'),
 	path('item/<int:pk>/', ItemView.as_view(), name='item'),
+    path('item/add/', ItemCreateView.as_view(), name='item_add'),
     path('admin/', admin.site.urls),
+
 ]
